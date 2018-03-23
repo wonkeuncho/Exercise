@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="com.example.wonkeun.calculator.MainActivity">
+
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="42dp" />
+
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="더하기"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="161dp"
+        android:onClick="addClick"/>
+
+    <Button
+        android:id="@+id/subtractButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="빼기"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="161dp"
+        android:onClick="subtractClick"/>
+
+    <Button
+        android:id="@+id/multiplyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="곱하기"
+        tools:layout_editor_absoluteX="192dp"
+        tools:layout_editor_absoluteY="161dp"
+        android:onClick="multiplyClick"/>
+
+    <Button
+        android:id="@+id/devideButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나누기"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="161dp"
+        android:onClick="devideClick"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="351dp"
+        android:layout_height="48dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="220dp" />
+</LinearLayout>
