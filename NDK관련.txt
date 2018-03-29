@@ -1,0 +1,21 @@
+C++로 작성된 library를 사용하는 경우. (OpenCV와 같은 lib에 있는 함수를 사용하고 싶을 때) -> NDK가 필요함
+
+안드로이드 내의 C++코드를 빌드해주는 것은 CMake.
+
+빌드를 하려고 하면,
+1. Gradle 이 CmakeLists.txt, 즉 외부 빌드 스크립트를 호출한다.
+2. CMake가 빌드 스크립트에 포함된 명령에 따라
+
+	add_library( # Sets the name of the library.
+            	 native-lib
+
+            	 # Sets the library as a shared library.
+            	 SHARED
+
+            	 # Provides a relative path to your source file(s).
+            	 src/main/cpp/native-lib.cpp )
+ 
+native-lib.cpp 을 공유 라이브러리로 컴파일하고, 이는 libnative-lib.so가 생기고 Gradle이 이를 APK로 패키징
+3. 자바 MainActivity.java에서 사용할 라이브러리를 처음에 로드해준다.
+	System.loadLibrary("native-lib");
+4. 이제 이 라이브러리에 포함된 함수를 사용할 수 있다.
